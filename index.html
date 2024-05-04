@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    <title>Document</title>
+   
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-pink-500 p-10">
+  <!-- Navbar -->
+    <div class="  mx-auto bg-gray-900 text-white rounded-lg p-10 flex flex-col gap-10" style="max-width: 90vw;" id="back">
+    <div class="flex justify-around items-center">
+        <div class="font-bold text-4xl text-center">JS</div>
+        <div class="invisible sm:hidden" id="mobnav">
+          <div class="flex justify-around items-center gap-5 flex-col">
+              <div>HomePage</div>
+              <div>Pricing</div>
+              <div>Team</div>
+              <div>About Us</div>
+              <div>Contact Us</div>
+              <button class="text-black bg-white p-3 rounded-lg font-bold" id="btn">Get Started</button>
+              <div class="flex items-center">
+                <button id="mode-toggle" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold px-4 py-2 rounded-md transition-colors duration-300 flex items-center" onclick="toggleMode()">
+                    <svg id="sun-icon" class="w-6 h-6 inline dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="moon-icon" class="w-6 h-6 hidden dark:inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </div>
+          </div>
+        </div>
+        <button onclick="display()" class="visible md:hidden">  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+        </svg>
+</button>
+        
+        <div class="hidden md:block">
+        <div class="flex justify-around items-center gap-5 ">
+          <div>HomePage</div>
+          <div>Pricing</div>
+          <div>Team</div>
+          <div>About Us</div>
+          <div>Contact Us</div>
+          <button class="text-black bg-white p-3 rounded-lg font-bold" id="btn">Get Started</button>
+          <div class="flex items-center">
+            <button id="mode-toggle" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold px-4 py-2 rounded-md transition-colors duration-300 flex items-center" onclick="toggleMode1()">
+                <svg id="sun-icon1" class="w-6 h-6 inline dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+                <svg id="moon-icon1" class="w-6 h-6 hidden dark:inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
+        </div>
+        
+      </div>
+    </div>
+
+    </div>
+    <div class="flex justify-center items-center gap-3  flex-col max-w-fit ">
+        <p class="font-bold text-4xl text-center">Frequently Asked Questions</p>
+        <div class="bg-gradient-to-r from-black to-gray-800 bg-cover bg-center rounded-3xl flex flex-col items-center justify-center p-8 text-white w-4/5 h-150">
+            <div class="bg-white dark:bg-gray-700 w-5/6 rounded-3xl flex justify-around  flex-col sm:flex-row px-4 mb-8">
+                <input type="text" id="search-input" placeholder="Search..." class="w-4/5 py-2 bg-transparent border-none focus:outline-none text-black dark:text-white">
+                <button id="search-button" class="bg-blue-500 hover:bg-gray-800 text-white px-4 py-2 rounded-3xl sm:ml-auto mt-2 mb-2">Search</button>
+            </div>
+        </div>
+        
+        <p class="text-center">Discover how to implement our design components seamlessly. If you have specific
+            queries or need further clarification, our design team is ready to assist.</p>
+
+            <button class="text-black bg-white p-3 rounded-lg font-bold " id="btn">Get in Touch</button>
+
+            <div class="flex flex-col gap-5 max-w-4xl">
+              <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+                <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+                  <div class="text-left">Who invented JavaScript?</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </div>
+                <div class="transition-all duration-300 overflow-hidden max-h-0">
+                  JavaScript was created by Brendan Eich while he was working at Netscape Communications Corporation in 1995. Initially named Mocha, it was later renamed to LiveScript before finally becoming JavaScript. Learn more about the history of JavaScript. <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" class="text-blue-500">here</a>
+                </div>
+              </div>
+            </div>
+
+
+  <div class="flex flex-col gap-5 max-w-4xl">
+    <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+      <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+        <div class="text-left">What is JavaScript?</div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+      </div>
+      <div class="transition-all duration-300 overflow-hidden max-h-0">
+        JavaScript is a high-level, interpreted programming language used to create interactive effects within web browsers. You can learn more about JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="text-blue-500">here.</a>
+      </div>
+    </div>
+          </div>
+
+
+<div class="flex flex-col gap-5 max-w-4xl">
+  <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+    <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+      <div class="text-left">What are some popular JavaScript libraries and frameworks?</div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </div>
+    <div class="transition-all duration-300 overflow-hidden max-h-0">
+      JavaScript has a rich ecosystem of libraries and frameworks that simplify web development tasks. Some popular ones include React.js, AngularJS, Vue.js, jQuery, and Express.js. These libraries and frameworks offer various features and functionalities to enhance productivity and efficiency in web development. Explore more about JavaScript libraries and frameworks <a href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries" target="_blank" class="text-blue-500">here</a>
+    </div>
+  </div>
+          </div>
+
+
+<div class="flex flex-col gap-5 max-w-4xl">
+  <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+    <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+      <div class="text-left">What are the data types in JavaScript?</div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </div>
+    <div class="transition-all duration-300 overflow-hidden max-h-0">
+      JavaScript is a high-level, interpreted programming language used to create interactive effects within web browsers. You can learn more about JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="text-blue-500">here.</a>
+    </div>
+  </div>
+          </div>
+
+
+
+<div class="flex flex-col gap-5 max-w-4xl">
+  <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+    <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+      <div class="text-left">What is the DOM in JavaScript?</div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </div>
+    <div class="transition-all duration-300 overflow-hidden max-h-0">
+      The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of HTML and XML documents as a tree of nodes, allowing JavaScript to interact with and manipulate the content, structure, and style of web pages dynamically. Learn more about the DOM <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" class="text-blue-500">here.</a>
+    </div>
+  </div>
+          </div>
+            
+<div class="flex flex-col gap-5 max-w-4xl">
+  <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+    <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+      <div class="text-left">What are JavaScript frameworks/libraries?</div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </div>
+    <div class="transition-all duration-300 overflow-hidden max-h-0">
+      JavaScript frameworks and libraries are pre-written JavaScript code that provide standardized solutions to common development challenges. Popular frameworks/libraries include React.js, AngularJS, and Vue.js. They offer features like component-based architecture, data binding, and routing to streamline web development. Explore more about JavaScript frameworks and libraries <a href="https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_web_frameworks" target="_blank" class="text-blue-500">here.</a>
+    </div>
+  </div>
+          </div>
+
+            
+<div class="flex flex-col gap-5 max-w-4xl">
+  <div class="border-2 border-sky-500 rounded-lg flex flex-col justify-start items-start gap-1 p-5 min-w-[800px] transition-all duration-300 overflow-hidden" data-open="false">
+    <div class="flex justify-between items-center w-full cursor-pointer" onclick="toggleBox(this)">
+      <div class="text-left">How do you handle asynchronous operations in JavaScript?</div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+    </div>
+    <div class="transition-all duration-300 overflow-hidden max-h-0">
+      Asynchronous operations in JavaScript are typically handled using callbacks, promises, or async/await syntax. These mechanisms allow you to execute code asynchronously, handle data from asynchronous operations, and avoid blocking the main thread. Dive deeper into asynchronous programming in JavaScript <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous" target="_blank" class="text-blue-500">here.</a>
+    </div>
+  </div>
+          </div>
+
+
+          </div>
+
+          <div class="max-w-md mx-auto mt-8">
+            <h2 class="text-2xl font-bold mb-4 text-center text-white">Didn't Find the answer? Ask our Team</h2>
+            <form action="/submit_form_endpoint" method="post" class="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div class="mb-4">
+                <label for="name" class="block font-semibold mb-1 text-white">Name:</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white">
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block font-semibold mb-1 text-white">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white">
+              </div>
+              <div>
+                <img src="https://i.pinimg.com/originals/1c/13/fe/1c13fef08fca46438a9f364bdfa3458d.gif" alt="GIF Image" class="w-full max-w-xl mt-4">
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block font-semibold mb-1 text-white">Message:</label>
+                <textarea id="message" name="message" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white" rows="4"></textarea>
+              </div>
+              <div class="mb-4 flex items-center">
+                <input type="checkbox" id="newsletter" name="newsletter" class="mr-2">
+                <label for="newsletter" class="text-sm text-white">Subscribe to our newsletter</label>
+              </div>
+              <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md">Submit</button>
+            </form>
+          </div>
+            
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
